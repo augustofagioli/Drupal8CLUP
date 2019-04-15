@@ -1,4 +1,4 @@
-PUBLIC="/home/augusto/Public"
+PUBLIC="/path/to/public/Public"
 D8ROOT="d8"
 echo "*********************"
 echo "*********************"
