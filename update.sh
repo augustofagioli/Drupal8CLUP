@@ -1,4 +1,5 @@
-PUBLIC="/path/t/your/Public"
+PUBLIC="/home/augusto/Public"
+D8ROOT="d8"
 echo "*********************"
 echo "*********************"
 echo ""
@@ -13,7 +14,7 @@ echo " * you made filesystem backup"
 echo " * you made database(s) backup"
 echo ""
 echo ""
-read -p "Are you ready to update to lastest Drupal. Type \"Y\" to confirm, please?" -n 1 -r
+read -p "Are you ready to update to latest Drupal. Type \"Y\" to confirm, please?" -n 1 -r
 echo "*********************"
 echo "TODO:"
 echo " *  set offline subdomains "
@@ -36,7 +37,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
     mkdir drupal-latest && tar xf tar.gz  -C drupal-latest  --strip-components 1
 
     #D. execute
-    cd d8
+    cd $D8ROOT
     cp -Rfv ../drupal-latest/*php .
     cp -Rfv ../drupal-latest/.ht* .
     cp -Rfv ../drupal-latest/profiles/ .
@@ -49,9 +50,9 @@ if [[ $REPLY =~ ^[Yy]$ ]]
     cp -Rfv ../drupal-latest/*config .
 
     echo "*************************************************"
-    echo "Done, you should now have the very lastest Drupal"
-    echo "Check your update process here http://d8.devel.straad.st/admin/reports/updates"
-    echo "Update your database: http://d8.devel.straad.st/update.php"
+    echo "Done, you should now have the very latest Drupal"
+    echo "Check your update process here https://your-site/admin/reports/updates"
+    echo "Update your database: https://your-site/update.php"
     echo "*************************************************"
 fi
 echo "End of script"
